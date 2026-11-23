@@ -573,6 +573,17 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 
 //layer search
+var searchLayer = new SearchLayer({
+    layer: lyr___v1_3,
+    colName: '사업장명',
+    zoom: 16,
+    collapsed: true,
+    maxResults: 10,
+    map: map
+});
+map.addControl(searchLayer);
+document.getElementsByClassName('search-layer')[0].getElementsByTagName('button')[0].className += " fa fa-binoculars";
+document.getElementById('ol-search-input').setAttribute('placeholder', '사업장명 검색');
 
 
 //scalebar
